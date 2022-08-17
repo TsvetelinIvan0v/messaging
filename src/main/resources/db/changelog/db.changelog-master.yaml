@@ -1,0 +1,26 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  1
+       author:  Tsvetelin Ivanov
+       changes:
+         -  createTable:
+              tableName:  message
+              columns:
+                -  column:
+                     name:  id
+                     type:  int
+                     autoIncrement:  true
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  type
+                     type:  varchar(7)
+                -  column:
+                     name:  payload
+                     type:  varchar(160)
+                     constraints:
+                       nullable:  false
+                -  column:
+                     name:  created_at
+                     type:  date
